@@ -1,0 +1,37 @@
+<div class="container">
+  <h1 id="desafio-paschoalotto">Desafio Paschoalotto</h1>
+  <hr>
+  <p>Desafio proposto pela empresa Paschoalotto Serviços Financeiros para vaga de Programador Full Stack.</p>
+  <h2 id="tecnologias-utilizadas">Tecnologias utilizadas</h2>
+  <ul>
+    <li>.NET Core <em>v3.1.301</em></li>
+    <li>Node.js <em>12.18.1</em></li>
+    <li>npm <em>6.14.5</em></li>
+    <li>Angular CLI <em>10</em></li>
+  </ul>
+  <h2 id="executar">Executar</h2>
+  <p>Após instalar todas as tecnologias necessáris, na pasta raíz do projeto, executar por linha de comando:</p>
+  <pre><code class="lang-sh">dotnet <span class="hljs-keyword">run</span><span class="bash"></span>
+</code></pre>
+  <p>Acessar a URL fornecida pelo dotnet. No sistema, acessar a aba <code>Cálculo</code> no canto superior direito, ou
+    entao pela URL <em>/calculo</em>.</p>
+  <h2 id="vari-veis-de-configura-o">Variáveis de configuração</h2>
+  <p>Acessar o arquivo <code>ClientApp\src\enviroments\enviroments.ts</code> e procurar as seguintes linhas:</p>
+  <pre><code><span class="hljs-symbol">maxInstallment:</span> <span class="hljs-number">3</span>,  <span class="hljs-comment">// quantidade máxima de parcelas</span>
+<span class="hljs-symbol">interestType:</span> <span class="hljs-number">1</span>,    <span class="hljs-comment">// tipo de juros ( 1 - simples, 2- composto )</span>
+<span class="hljs-symbol">interestValue:</span> <span class="hljs-number">0.2</span>, <span class="hljs-comment">// valor do juros em porcentagem</span>
+<span class="hljs-symbol">commission:</span> <span class="hljs-number">10</span>      <span class="hljs-comment">// Porcentagem de comissão da Paschoalotto</span>
+</code></pre>
+  <h2 id="modificar-exemplo">Modificar exemplo</h2>
+  <p>Acessar o arquivo <code>ClientApp\src\app\calculo\calculo.component.ts</code> e procurar as seguintes linhas:</p>
+  <pre><code>valueDebt = <span class="hljs-number">3000</span>;                           <span class="hljs-comment">// Valor da divida</span>
+dueDateDebt = '<span class="hljs-number">03</span>/<span class="hljs-number">01</span>/<span class="hljs-number">2019</span>';                 <span class="hljs-comment">// Data de vencimento da divida</span>
+collaboratorsPhoneDebt = '(<span class="hljs-number">11</span>)<span class="hljs-number">99999</span><span class="hljs-number">-9999</span>'   <span class="hljs-comment">// Telefone do colaborador</span>
+</code></pre>
+  <h2 id="considera-es-finais">Considerações Finais</h2>
+  <ul>
+    <li>Projeto foi desenvolvido utilizando o conceito de SPA.</li>
+    <li>Foi seguido todas as regras encontradas na proposta, tais como calculo de diferença de dias entre datas, campos
+      exibidos ao usuário, configuração dinâmica, juros simples e compostos.</li>
+  </ul>
+</div>

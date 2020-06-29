@@ -1,0 +1,64 @@
+<div class="container">
+    <div class="row">
+      <div class="col-sm"></div>
+      <div class="col-sm-8">
+        <div class="card mb-12">
+            <div class="card-header">Calculo de divida Paschoalotto</div>
+            <div *ngIf="(calculo)" class="card-body">
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Data Vencimento</label>
+                    <div class="col-sm-8">
+                        <input type="text" readonly class="form-control-plaintext" value="{{calculo.dueDateDebt | date:'dd/MM/y'}}">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Quantidade Parcelas</label>
+                    <div class="col-sm-8">
+                        <input type="text" readonly class="form-control-plaintext" value="{{calculo.maxInstallment}}">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Valor Original</label>
+                    <div class="col-sm-8">
+                        <input type="text" readonly class="form-control-plaintext" value="{{calculo.valueDebt | currency:'BRL':'symbol':'1.2-2':'pt'}}">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Dias Atraso</label>
+                    <div class="col-sm-8">
+                        <input type="text" readonly class="form-control-plaintext" value="{{calculo.delayDays}}">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Valor Juros</label>
+                    <div class="col-sm-8">
+                        <input type="text" readonly class="form-control-plaintext" value="{{calculo.interestTotal | currency:'BRL':'symbol':'1.2-2':'pt'}}">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Valor Final</label>
+                    <div class="col-sm-8">
+                        <input type="text" readonly class="form-control-plaintext" value="{{calculo.totalValue | currency:'BRL':'symbol':'1.2-2':'pt'}}">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Parcelas</label>
+                    <div class="col-sm-8">
+                        <div class="col-sm-12" *ngFor="let installmentDate of calculo.installmentDates; let i = index">
+                            <input type="text" readonly class="form-control-plaintext" value="{{i+1}} - {{calculo.installmentValue | currency:'BRL':'symbol':'1.2-2':'pt'}} - Data de Vencimento: {{installmentDate | date:'dd/MM/y'}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Contato Colaborador</label>
+                    <div class="col-sm-8">
+                        <input type="text" readonly class="form-control-plaintext" value="{{calculo.collaboratorsPhoneDebt}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="col-sm"></div>
+    </div>
+  </div>
+  <div class="clearfix">...</div>
