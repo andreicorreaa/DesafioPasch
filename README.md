@@ -1,5 +1,4 @@
 # Desafio Paschoalotto
-___
 
 Desafio proposto pela empresa Paschoalotto Serviços Financeiros para vaga de Programador Full Stack.
 
